@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="root">
-      <input type="text" name="" value="" ref="writeItem" placeholder="Inserisci cosa devi fare">
+      <input type="text" name="todolist" value="" v-model="newItem" placeholder="Inserisci cosa devi fare" @keyup.enter="addItem">
       <button type="button" name="button" @click="addItem">Aggiungi</button>
       <ul>
         <li v-for="(item, index) in list">{{item}} <span><i class="fas fa-trash-alt" @click="deletItem(index)"></i></span></li>

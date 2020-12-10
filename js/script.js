@@ -15,20 +15,20 @@ var app = new Vue({
       "Fare la spesa",
       "Fare un giro in bici",
       "Leggere 10 pagine del libro"
-    ]
+    ],
+    newItem: ""
   },
   methods: {
     addItem: function() {
-      let newItemVal = this.$refs.writeItem.value;
+      let newItemVal = this.newItem;
       if (newItemVal !== "") {
         this.list.push(newItemVal);
+        this.newItem = "";
       }
     },
     deletItem: function(index) {
       this.list.splice(index, 1);
     }
-
   }
-
 
 });
