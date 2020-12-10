@@ -18,9 +18,14 @@ var app = new Vue({
     ]
   },
   methods: {
-    addItem: function() {      
-      let newItem = this.$refs.writeItem.value;
-      this.list.push(newItem);
+    addItem: function() {
+      let newItemVal = this.$refs.writeItem.value;
+      if (newItemVal !== "") {
+        this.list.push(newItemVal);
+      }
+    },
+    deletItem: function(index) {
+      this.list.splice(index, 1);
     }
 
   }
