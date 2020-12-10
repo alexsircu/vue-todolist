@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div id="root">
+      <input type="text" name="" value="" ref="writeItem" placeholder="Inserisci cosa devi fare">
+      <button type="button" name="button" @click="addItem">Aggiungi</button>
+      <ul>
+        <li v-for="item in list">{{item}}</li>
+      </ul>
+    </div>
+    <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>
