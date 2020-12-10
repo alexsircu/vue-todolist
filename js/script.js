@@ -11,7 +11,7 @@ var app = new Vue({
   el: "#root",
   data: {
     list: [
-      "Segliarsi alle 7:00",
+      "Svegliarsi alle 7:00",
       "Fare la spesa",
       "Fare un giro in bici",
       "Leggere 10 pagine del libro"

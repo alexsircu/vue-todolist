@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Federo&family=Syne+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
@@ -9,11 +11,26 @@
   </head>
   <body>
     <div id="root">
-      <input type="text" name="todolist" value="" v-model="newItem" placeholder="Inserisci cosa devi fare" @keyup.enter="addItem">
-      <button type="button" name="button" @click="addItem">Aggiungi</button>
-      <ul>
-        <li v-for="(item, index) in list">{{item}} <span><i class="fas fa-trash-alt" @click="deletItem(index)"></i></span></li>
-      </ul>
+
+      <div id="container">
+        <h1 id="title">Let's do this:</h1>
+
+        <div id="list-items-container">
+          <ul id="list-items">
+            <li v-for="(item, index) in list"><span id="square-container" @click="deletItem(index)"><i class="far fa-square"></i></span>{{item}}</i></span></li>
+          </ul>
+        </div>
+
+        <div id="add-new-item">
+          <input type="text" name="todolist" value="" v-model="newItem" placeholder="Inserisci cosa devi fare" @keyup.enter="addItem">
+        </div>
+
+        <!-- <div class="">
+          <button type="button" name="button" @click="addItem">Aggiungi</button>
+        </div> -->
+
+      </div>
+
     </div>
     <script src="js/script.js" charset="utf-8"></script>
   </body>

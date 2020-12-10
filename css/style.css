@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  background-color: #FFB180;
+}
+
+#title {
+  text-align: center;
+  font-family: 'Federo', sans-serif;
+  font-size: 60px;
+  padding: 40px 0;
+}
+
+#container {
+  width: 60%;
+  height: 100vh;
+  margin: auto;
+  background-color: lightyellow;
+  border-radius: 20px;
+}
+
+#add-new-item {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+#list-items-container {
+  width: 75%;
+  margin: auto;
+}
+
+#list-items li {
+  list-style: none;
+  margin: 20px;
+  font-family: 'Nerko One', cursive;
+  font-size: 35px;
+}
+
+#square-container {
+  margin-right: 80px;
+}
+
+#add-new-item input {
+  margin-top: 50px;
+  font-size: 30px;
+  border-radius: 10px;
+
+}
